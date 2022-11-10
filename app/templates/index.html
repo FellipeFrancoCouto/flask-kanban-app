@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Kanban Board</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Kanban Board</h1>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center">No tasks started. Please add some below</h4>
+    {% else %}
+    <div style="display: flex;text-align: center;">
+    <table class="column" style="background-color:#ffcccb;">
+        <caption>To do</caption>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            {% if task.status == "0" %}
+                <tr >
+                    <td class="column">{{ task.content }}</td>
+                    <td>{{ task.date_created.date() }}</td>
+
+                    <td>
+                        <a href="/delete/{{task.id}}">Delete</a>
+                        <br>
+                        <a href="/update/{{task.id}}">Update</a>
+                        <br>
+                        <label for="status">Choose status:</label>
+                        <form action="/statusChange/{{task.id}}" method="POST">
+                            <select name="status" id="status_task">
+                                <option value=0>To do</option>
+                                <option value=1>In Progress</option>
+                                <option value=2>Done</option>
+                            </select>
+                            <input type="submit" value="Change Status">
+                        </form>
+                        
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+    <table class="column"  style="background-color: #F0F8FF;">
+        <caption>In Progress</caption>
+        <tr >
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            {% if task.status == "1" %}
+                <tr>
+                    <td>{{ task.content }}</td>
+                    <td>{{ task.date_created.date() }}</td>
+
+                    <td>
+                        <a href="/delete/{{task.id}}">Delete</a>
+                        <br>
+                        <a href="/update/{{task.id}}">Update</a>
+                        <br>
+                        <label for="status">Choose status:</label>
+                        <form action="/statusChange/{{task.id}}" method="POST">
+                            <select name="status" id="status_task">
+                                <option value=0>To do</option>
+                                <option value=1>In Progress</option>
+                                <option value=2>Done</option>
+                            </select>
+                            <input type="submit" value="Change Status">
+                        </form>
+                        
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+    <table class="column" style="background-color: #66FF99;">
+        <caption>Done</caption>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            {% if task.status == "2" %}
+                <tr>
+                    <td>{{ task.content }}</td>
+                    <td>{{ task.date_created.date() }}</td>
+
+                    <td>
+                        <a href="/delete/{{task.id}}">Delete</a>
+                        <br>
+                        <a href="/update/{{task.id}}">Update</a>
+                        <br>
+                        <label for="status">Choose status:</label>
+                        <form action="/statusChange/{{task.id}}" method="POST">
+                            <select name="status" id="status_task">
+                                <option value=0>To do</option>
+                                <option value=1>In Progress</option>
+                                <option value=2>Done</option>
+                            </select>
+                            <input type="submit" value="Change Status">
+                        </form>
+                        
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+</div>
+    {% endif %}
+
+
+
+    <div class="button" >
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+    </div>
+</div>
+{% endblock %}

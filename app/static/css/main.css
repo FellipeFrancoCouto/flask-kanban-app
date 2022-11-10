@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+body, html {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(-45deg, #b68475, #ac8695, #859da5, #6f8681);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
