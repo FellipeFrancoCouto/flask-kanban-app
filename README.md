@@ -1,5 +1,5 @@
 # flask-kanban-app
-A simple productivity tool created with flask. Follow the re
+A simple productivity tool created with flask. This app includes all the basic functionalities of a Kanban Board (creating new tasks, moving tasks between stages, and delete the tasks), but also includes an extra functionality to update the textual content of a text through the button "update"
 
 ## How to run (Windows):
 1. Set up the virtual environment (on the command prompt):
