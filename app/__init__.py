@@ -1,5 +1,5 @@
 #  Import relevant libraries
-from flask import Flask, render_template, url_for, Blueprint, current_app, g
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
 from flask import Flask, render_template, request, redirect
