@@ -17,7 +17,6 @@ class Todo(db.Model):
     def __repr__(self):
         return '<Task %r>, content %r, status %r' % (self.id, self.content, self.status)
 
-
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tasks.db'
