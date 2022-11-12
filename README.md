@@ -28,7 +28,7 @@ A simple productivity tool created with flask. This app includes all the basic f
     3. Set up the virtual environment\
     `python -m venv venv`
     4. Initialize it: \
-    `venv\Scripts\activate.bat`
+    `venv\bin\activate.bat`
 2. Install all requirements \
   `pip install -r requirements.txt`
 3. Run app.py \
