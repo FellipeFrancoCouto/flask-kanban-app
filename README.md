@@ -42,4 +42,4 @@ A simple productivity tool created with flask. This app includes all the basic f
   `python -m unittest discover -s  tests`
 
 
-Thanks to the amazing CS162 TA, Ha Tran, for all her help along the project. Credits also to the great [tutorial video](https://www.youtube.com/watch?v=Z1RJmh_OqeA&t=2410s) from freeCodeCamp.org for providing a very intuitive guide to complete this project. Credits to Manuel Pinto for the cool [transitioning background](https://1stwebdesigner.com/15-css-background-effects/) you can see in the flask application
+Thanks to the amazing CS162 TA, Ha Tran, for all her help along the project. Credits also to the great [tutorial video](https://www.youtube.com/watch?v=Z1RJmh_OqeA&t=2410s) from freeCodeCamp.org for providing a very intuitive guide to complete this project. Credits to Manuel Pinto for the cool [transitioning background](https://1stwebdesigner.com/15-css-background-effects/) you can see in the flask application. Thanks to my colleagues Gabriel and Aniket, who collaborated with me in portions of this assignment.
